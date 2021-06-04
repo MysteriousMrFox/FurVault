@@ -1,0 +1,3 @@
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [QSA,L,R=404]
+RewriteRule ^(.*)$ view.php?id=$1 [QSA,END]
